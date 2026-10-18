@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <title>Jersey HUB | Football and rugby jerseys in Ghana</title>
+  <meta name="description" content="Buy football, rugby and custom jerseys in Ghana. Order on WhatsApp, delivery across the country.">
+  <link rel="icon" href="favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">JerseyHUB</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#shop">Shop</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+      Cart (<span id="badge">0</span>)
+    </button>
+  </div>
+</header>
+
+<main id="main-content" class="wrap">
+
+  <section class="hero">
+    <h1>Football, rugby and custom jerseys, delivered in Ghana</h1>
+    <p>Pick your kits, send the order on WhatsApp, and we confirm size, payment and delivery with you.</p>
+    <a class="btn" href="#shop">Shop jerseys</a>
+  </section>
+
+  <section id="shop" aria-label="Shop">
+    <div class="toolbar">
+      <input id="q" type="search" placeholder="Search kits or clubs" aria-label="Search">
+      <select id="cat" aria-label="Collection">
+        <option value="all">All kits</option>
+        <option value="epl">Premier League</option>
+        <option value="laliga">La Liga</option>
+        <option value="ligue1">Ligue 1</option>
+        <option value="national">National teams</option>
+        <option value="custom">Custom print</option>
+      </select>
+      <select id="sort" aria-label="Sort">
+        <option value="default">Sort: default</option>
+        <option value="low">Price, low to high</option>
+        <option value="high">Price, high to low</option>
+        <option value="name">Name</option>
+      </select>
+      <button class="btn ghost" id="reset" type="button">Reset</button>
+      <span class="count" id="count" aria-live="polite"></span>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>No jerseys match your search. Try a different term or reset the filters.</p>
+  </section>
+
+  <section class="section" id="faq">
+    <h2>Questions</h2>
+    <details>
+      <summary>How long does delivery take?</summary>
+      <p>1–2 business days in Accra, 2–5 business days in other regions.</p>
+    </details>
+    <details>
+      <summary>How do I pay?</summary>
+      <p>Send your order on WhatsApp. We confirm the total and take payment by Mobile Money (MoMo, Telecel Cash, AT Money) or card.</p>
+    </details>
+    <details>
+      <summary>Can I return a jersey?</summary>
+      <p>Yes, within 14 days of delivery if it is unused and in original condition.</p>
+    </details>
+    <details>
+      <summary>Are the jerseys authentic?</summary>
+      <p>They are authentic-style replicas with accurate club crests.</p>
+    </details>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Order and support</h4>
+        <p><a href="https://wa.me/233555139824" target="_blank" rel="noopener">WhatsApp +233 555 139 824</a></p>
+        <p><a href="tel:+233555139824">Call +233 555 139 824</a></p>
+        <p><a href="mailto:jerseyhub2026@mail.com">jerseyhub2026@mail.com</a></p>
+      </div>
+      <div>
+        <h4>Store</h4>
+        <p>Dansoman, 547th Gulley Road, Accra</p>
+      </div>
+      <div>
+        <h4>We accept</h4>
+        <p>MoMo, Telecel Cash, AT Money, card</p>
+      </div>
+    </div>
+    <div class="legal">
+      <a href="terms.html">Terms and conditions</a>
+      <a href="privacy.html">Privacy policy</a>
+      <span>&copy; 2026 Jersey HUB</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Cart overlay + drawer -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-label="Shopping cart" aria-hidden="true">
+  <header>
+    <h2>Your cart</h2>
+    <button class="x" id="closeCart" aria-label="Close cart">&times;</button>
+  </header>
+  <div id="items"></div>
+  <div class="total">
+    <span>Total</span>
+    <span id="total">GH&#8373;0.00</span>
+  </div>
+  <button class="btn" id="order" disabled>Order on WhatsApp</button>
+  <p class="note">This opens WhatsApp with your order filled in. Nothing is charged until we confirm with you.</p>
+</aside>
+
+<!-- Mobile bottom bar (visible ≤640px) -->
+<div class="mobile-bar" id="mobileBar" aria-label="Quick actions">
+  <a class="mb-wa" href="https://wa.me/233555139824" target="_blank" rel="noopener" aria-label="WhatsApp us">WhatsApp order</a>
+  <button class="mb-cart" id="mobileCartBtn" aria-label="Open cart">Cart (<span id="mobileBadge">0</span>)</button>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
